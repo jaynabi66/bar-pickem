@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+}
+
+.title {
+    border-left: 2px solid #e94558;
+    margin: 0 min(100px, 10%);
+    padding: 50px 50px 0 50px;
+    max-width: 1180px;
+    width: 80%;
+    
+    color: white;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.scan {    
+    margin-top: 45px;
+
+    .scan__button {
+        display: block;
+        height: 80px;
+        margin: 0 auto;
+        width: 80px;
+        
+        .scan__button--circle {
+            border: 20px solid #e02b20;
+            border-radius: 50%;
+            display: block;
+            height: 40px;
+            position: absolute;
+            width: 40px;
+        }
+        
+        .scan__button--square {
+            border: 5px solid #e02b20;
+            display: block;
+            height: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+            position: absolute;
+            width: 30px;
+        }
+    }
+}
+
+.buttons-wrapper {
+    margin: 45px auto 0 auto;
+    padding: 2% 0 12px 0;
+    position: relative;
+    width: 80%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .button {
+        background-color: white;
+        padding: 6px 20px;
+        border: none;
+
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 34px;
+
+        &:active {
+            background-color: rgb(200, 200, 200);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RESULTS</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1 class="title">
+                RESULTS
+            </h1>
+        </header>
+        <main>
+            <div class="select">
+                <div class="input-row">
+                    <label htmlFor="year">Year:</label>
+                    <input type="number" id="year" name="year" min="2020" value="2025" required></input>
+                </div>
+                <div class="input-row">
+                    <label htmlFor="week">Week:</label>
+                    <input type="number" id="week" name="week" min="1" value="1" required></input>
+                </div>
+                <div class="input-row">
+                    <button class="button">
+                        Get results
+                    </button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0001</td>
+                        <td>30</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>0101</td>
+                        <td>25</td>
+                        <td>Los Angeles</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons-wrapper">
+                <button class="button">
+                    Next
+                </button>
+                <button class="button" onclick="navigateScan()">
+                    Done
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 My Site</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
