@@ -1,7 +1,7 @@
 function tryLogin() {
     const loginValid = handleLogin();
     if (loginValid) {
-        window.location.assign("scan/index.html");
+        window.location.assign("../scan/index.html");
     }
 }
 
@@ -24,5 +24,5 @@ function handleLogin () {
 }
 
 function navigateSignUp() {
-    window.location.assign("sign-up/index.html");
+    window.location.assign("../sign-up/index.html");
 }

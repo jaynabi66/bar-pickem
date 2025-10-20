@@ -3,5 +3,5 @@ function navigateResults() {
 }
 
 function navigateLogin() {
-    window.location.assign("../index.html");
+    window.location.assign("../login/index.html");
 }
