@@ -20,30 +20,32 @@ body {
 .scan {    
     margin-top: 45px;
 
-    .scan__button {
+    .scan__label {
         display: block;
-        height: 80px;
         margin: 0 auto;
-        width: 80px;
+        width: fit-content;
         
-        .scan__button--circle {
-            border: 20px solid #e02b20;
-            border-radius: 50%;
-            display: block;
-            height: 40px;
-            position: absolute;
-            width: 40px;
-        }
+        background-color: white;
+        padding: 6px 20px;
+        border: none;
         
-        .scan__button--square {
-            border: 5px solid #e02b20;
-            display: block;
-            height: 30px;
-            margin-left: 20px;
-            margin-top: 20px;
-            position: absolute;
-            width: 30px;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 34px;
+        text-align: center;
+
+        &:active {
+            background-color: rgb(200, 200, 200);
         }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .scan__input {
+        display: none;
     }
 }
 
