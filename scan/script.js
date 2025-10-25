@@ -13,7 +13,7 @@ pickemInput.addEventListener("change", function(event) {
             };
             image.className = "scan__image";
             image.src = e.target.result;
-            
+
             pickemImages.innerHTML = "";
             pickemImages.appendChild(image);
         };
@@ -27,8 +27,9 @@ pickemInput.addEventListener("change", function(event) {
     }
 });
 
-function navigateResults() {
-    window.location.assign("../results/index.html");
+function processPickem() {
+    // Does nothing for now.
+    console.log("Process the pickem");
 }
 
 function navigateHome() {
