@@ -1,0 +1,75 @@
+.sign-up-component {
+    .title {
+        border-left: 2px solid #e94558;
+        margin: 0 min(100px, 10%);
+        padding: 50px 50px 0 50px;
+        max-width: 1180px;
+        width: 80%;
+        
+        color: white;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 68px;
+        font-weight: 700;
+        text-align: left;
+        word-wrap: break-word;
+    }
+    
+    .input-row {
+        align-items: center;
+        display: flex;
+        column-gap: 8px;
+        justify-content: center;
+        margin-top: 12px;
+
+        &:first-of-type {
+            margin-top: 45px;
+        }
+
+        label {
+            color: white;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        input {
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: left;
+            word-wrap: break-word;
+        }
+    }
+
+    .buttons-wrapper {
+        margin: 45px auto 0 auto;
+        padding: 2% 0 12px 0;
+        position: relative;
+        width: 80%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .button {
+            background-color: white;
+            padding: 6px 20px;
+            border: none;
+
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 34px;
+
+            &:active {
+                background-color: rgb(200, 200, 200);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>RESULTS</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <header>
-            <h1 class="title">
+import './Results.css';
+
+export const ResultsPage = '/results';
+
+const Results = () => {
+    return (
+        <div className='content results-component'>
+            <h1 className="title">
                 RESULTS
             </h1>
-        </header>
-        <main>
-            <div class="select">
-                <div class="input-row">
+            <div className="select">
+                <div className="input-row">
                     <label htmlFor="year">Year:</label>
                     <input type="number" id="year" name="year" min="2020" value="2025" required></input>
                 </div>
-                <div class="input-row">
+                <div className="input-row">
                     <label htmlFor="week">Week:</label>
                     <input type="number" id="week" name="week" min="1" value="1" required></input>
                 </div>
-                <div class="input-row">
-                    <button class="button">
+                <div className="input-row">
+                    <button className="button">
                         Get results
                     </button>
                 </div>
@@ -49,20 +44,16 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="buttons-wrapper">
-                <button class="button">
+            <div className="buttons-wrapper">
+                <button className="button">
                     Next
                 </button>
-                <button class="button" onclick="navigateScan()">
+                <button className="button">
                     Done
                 </button>
             </div>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 My Site</p>
-        </footer>
+        </div>
+    )
+}
 
-        <script src="script.js"></script>
-    </body>
-</html>
+export default Results;

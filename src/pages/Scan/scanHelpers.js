@@ -1,9 +1,8 @@
-const pickemImages = document.getElementById("pickemImages");
-const pickemLabel = document.getElementById("pickemLabel");
-const pickemInput = document.getElementById("pickemInput");
+export async function handleChooseImage (files) {
+    const pickemImages = document.getElementById("pickemImages");
+    const pickemLabel = document.getElementById("pickemLabel");
+    const pickemInput = document.getElementById("pickemInput");
 
-pickemInput.addEventListener("change", function(event) {
-    const files = [...event.target.files];
     if (files.length > 0) {
         const reader = new FileReader();
         reader.onload = function(e) {
@@ -25,13 +24,4 @@ pickemInput.addEventListener("change", function(event) {
         pickemImages.innerHTML = "";
         pickemLabel.textContent = "Choose file";
     }
-});
-
-function processPickem() {
-    // Does nothing for now.
-    console.log("Process the pickem");
-}
-
-function navigateHome() {
-    window.location.assign("../index.html");
 }

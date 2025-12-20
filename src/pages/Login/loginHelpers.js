@@ -1,11 +1,4 @@
-function tryLogin() {
-    const loginValid = handleLogin();
-    if (loginValid) {
-        window.location.assign("../scan/index.html");
-    }
-}
-
-function handleLogin () {
+export async function handleLogin () {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
 
@@ -21,8 +14,4 @@ function handleLogin () {
     }
 
     return true;
-}
-
-function navigateSignUp() {
-    window.location.assign("../sign-up/index.html");
 }
