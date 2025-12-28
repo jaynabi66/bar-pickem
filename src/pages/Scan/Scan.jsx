@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HomePage } from '../Home/Home';
 import { ConfirmPage } from '../Confirm/Confirm';
-import { handleChooseImage, processImage } from './scanHelpers.js';
+import { setUpPage, handleChooseImage, processImage, clearLocalStorage } from './scanHelpers.js';
 import './Scan.css';
 
 export const ScanPage = '/scan';
@@ -9,18 +10,24 @@ export const ScanPage = '/scan';
 const Scan = () => {
     const navigate = useNavigate();
 
-    const navigateHome = () => {
-      navigate(HomePage);
+    useEffect(() => {
+        setUpPage();
+    }, []);
+    
+    const navigateBack = () => {
+        clearLocalStorage();
+        navigate(HomePage);
     };
     
     const chooseImage = (event) => {
-      const files = [...event.target.files];
-      handleChooseImage(files);
+        console.log(event);
+        const files = [...event.target.files];
+        handleChooseImage(files);
     };
     
-    const tryNavigateProcess = () => {
-        if (processImage()) {
-            navigate(ConfirmPage)
+    const tryNavigateProcess = async () => {
+        if (await processImage()) {
+            navigate(ConfirmPage);
         }
     };
 
@@ -31,7 +38,7 @@ const Scan = () => {
                     BARPICKEM - SCAN
                 </h1>
 
-                <button className='button' onClick={navigateHome}>
+                <button className='button' onClick={navigateBack}>
                     BACK
                 </button>
             </div>

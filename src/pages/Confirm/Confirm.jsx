@@ -13,7 +13,11 @@ const Confirm = () => {
         setUpPage();
     }, []);
     
-    const navigateScan = () => {
+    const navigateBack = () => {
+        navigate(ScanPage);
+    };
+    
+    const confirmScan = () => {
         clearLocalStorage();
         navigate(ScanPage);
     };
@@ -25,7 +29,7 @@ const Confirm = () => {
                     BARPICKEM - CONFIRM
                 </h1>
 
-                <button className='button' onClick={navigateScan}>
+                <button className='button' onClick={navigateBack}>
                     BACK
                 </button>
             </div>
@@ -34,7 +38,7 @@ const Confirm = () => {
                 <span id='pickemBody' className='response__body'></span>
             </div>
             <div className='buttons-wrapper'>
-                <button className='button' onClick={navigateScan}>
+                <button className='button' onClick={confirmScan}>
                     CONFIRM
                 </button>
             </div>
