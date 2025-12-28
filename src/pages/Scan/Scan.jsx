@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { HomePage } from '../Home/Home';
+import { ConfirmPage } from '../Confirm/Confirm';
 import { handleChooseImage, processImage } from './scanHelpers.js';
 import './Scan.css';
 
@@ -19,9 +20,7 @@ const Scan = () => {
     
     const tryNavigateProcess = () => {
         if (processImage()) {
-            console.log("Processed");
-        } else {
-            console.log("Failed");
+            navigate(ConfirmPage)
         }
     };
 
