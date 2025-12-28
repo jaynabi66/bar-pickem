@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { HomePage } from '../Home/Home';
-import { handleChooseImage } from './scanHelpers.js';
+import { handleChooseImage, processImage } from './scanHelpers.js';
 import './Scan.css';
 
 export const ScanPage = '/scan';
@@ -17,7 +17,13 @@ const Scan = () => {
       handleChooseImage(files);
     };
     
-    const tryNavigateProcess = () => {};
+    const tryNavigateProcess = () => {
+        if (processImage()) {
+            console.log("Processed");
+        } else {
+            console.log("Failed");
+        }
+    };
 
     return (
         <div className='content scan-component'>

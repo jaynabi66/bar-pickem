@@ -12,6 +12,7 @@ export async function handleChooseImage (files) {
             };
             image.className = "scan__image";
             image.src = e.target.result;
+            localStorage.setItem("imageUrl", e.target.result);
 
             pickemImages.innerHTML = "";
             pickemImages.appendChild(image);
@@ -24,4 +25,31 @@ export async function handleChooseImage (files) {
         pickemImages.innerHTML = "";
         pickemLabel.textContent = "Choose file";
     }
+}
+
+export async function processImage () {
+    const pickemImages = document.getElementById("pickemImages");
+    const pickemLabel = document.getElementById("pickemLabel");
+
+    if (pickemImages.length == 0) return;
+    
+    const imageUrl = pickemImages.firstChild.src;
+    const imageResponse = await fetch(imageUrl);
+    if (!imageResponse.ok) {
+        pickemImages.innerHTML = "Error! Image could not be loaded.";
+        pickemLabel.textContent = "Choose file";
+        return false;
+    }
+
+    const arrayBuffer = await imageResponse.arrayBuffer();
+    const byteArray = new Uint8Array(arrayBuffer);
+
+    const processResponse = await fetch("/api/process", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: byteArray,
+    });
+    const body = await processResponse.json();
+    localStorage.setItem("responseBody", JSON.stringify(body));
+    return processResponse.ok;
 }
