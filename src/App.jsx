@@ -7,7 +7,7 @@ import {
 import './App.css'
 import Home, { HomePage } from './pages/Home/Home';
 import Login, { LoginPage } from './pages/Login/Login';
-import Results, { ResultsPage } from './pages/Results/Results';
+import Standings, { StandingsPage } from './pages/Standings/Standings';
 import Scan, { ScanPage } from './pages/Scan/Scan';
 import Confirm, { ConfirmPage } from './pages/Confirm/Confirm';
 import SignUp, { SignUpPage } from './pages/SignUp/SignUp';
@@ -22,7 +22,7 @@ function App() {
           <Route path={SignUpPage} element={<SignUp />}/>
           <Route path={ScanPage} element={<Scan />}/>
           <Route path={ConfirmPage} element={<Confirm />}/>
-          <Route path={ResultsPage} element={<Results />}/>
+          <Route path={StandingsPage} element={<Standings />}/>
         </Routes>
       </div>
     </Router>

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ScanPage } from '../Scan/Scan';
-import { ResultsPage } from '../Results/Results';
+import { StandingsPage } from '../Standings/Standings';
 import './Home.css';
 
 export const HomePage = '/';
@@ -12,8 +12,8 @@ const Home = () => {
         navigate(ScanPage);
     };
     
-    const navigateResults = function() {
-        navigate(ResultsPage);
+    const navigateStandings = function() {
+        navigate(StandingsPage);
     };
 
     return (
@@ -25,7 +25,7 @@ const Home = () => {
                 <button className='button' onClick={navigateScan}>
                     SCAN
                 </button>
-                <button className='button' onClick={navigateResults}>
+                <button className='button' onClick={navigateStandings}>
                     STANDINGS
                 </button>
             </div>
