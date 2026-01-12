@@ -43,9 +43,11 @@ function jsonToInnerHtml(results) {
       html += "<div>Game " + i + ": " + parseGame(results["Game" + i]) + "</div>";
     } while ("Game" + ++i in results);
     i = 1;
+    let score = "";
     do {
-      html += "<div>Score " + i + ": " + parseGame(results["Score" + i]) + "</div>";
+      score += results["Score" + i];
     } while ("Score" + ++i in results);
+    html += "<div>Final Score " + score + "</div>";
     i = 1;
     let phone = "";
     do {
