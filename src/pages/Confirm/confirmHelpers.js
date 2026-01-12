@@ -68,7 +68,6 @@ function parseGame(gameResult) {
 }
 
 export function clearLocalStorage() {
-    localStorage.removeItem("responseBody");
     localStorage.removeItem("imageUrl");
     localStorage.removeItem("imageName");
 }
