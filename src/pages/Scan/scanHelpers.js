@@ -70,7 +70,7 @@ export async function processImage () {
     const arrayBuffer = await imageResponse.arrayBuffer();
     const byteArray = new Uint8Array(arrayBuffer);
 
-    const processResponse = await fetch("/api/process", {
+    const processResponse = await fetch("https://gambit-bjf8gahhfmb6crdr.canadacentral-01.azurewebsites.net/api/process", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: byteArray,
