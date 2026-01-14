@@ -72,7 +72,7 @@ export async function processImage () {
 
     const processResponse = await fetch("https://testing-nabi-fnb0eufxamd6g7f2.canadacentral-01.azurewebsites.net/api/process", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/octet-stream" },
         body: byteArray,
     });
     const body = await processResponse.json();
