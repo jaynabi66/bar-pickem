@@ -13,8 +13,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-/app/dist/*
-!/app/dist/staticwebapp.config.json
+dist
 dist-ssr
 *.local
 
