@@ -1,3 +1,8 @@
+# Any directory starting with a dot
+**/\.*/
+# Except .github
+!.github/
+
 # Logs
 logs
 *.log
@@ -22,3 +27,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Misc
+**/.DS_Store
+**/__pycache__
+/api/venv/
+/api/OMRChecker.wiki/
