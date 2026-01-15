@@ -70,7 +70,7 @@ export async function processImage () {
     const arrayBuffer = await imageResponse.arrayBuffer();
     const byteArray = new Uint8Array(arrayBuffer);
 
-    const processResponse = await fetch("https://testing-nabi-fnb0eufxamd6g7f2.canadacentral-01.azurewebsites.net/api/process", {
+    const processResponse = await fetch("api/process", {
         method: "POST",
         headers: { "Content-Type": "application/octet-stream" },
         body: byteArray,

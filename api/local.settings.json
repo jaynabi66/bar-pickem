@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AZURE_SQL_CONN": "Driver={ODBC Driver 18 for SQL Server};Server=tcp:gambit-server.database.windows.net,1433;Database=gambit;Uid=CloudSAd87abc3a;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  },
+  "ConnectionStrings": {}
+}
